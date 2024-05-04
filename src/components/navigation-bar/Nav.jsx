@@ -6,12 +6,17 @@ import Reservations from '../main/pages/Reservations.jsx';
 import OrderOnline from '../main/pages/OrderOnline.jsx';
 import Login from '../main/pages/Login.jsx';
 
+import logo from '../../assets/images/logos/logo1.svg';
+import './Nav.css';
+
+
 
 
 export function Nav () {
     return (
         <>
-        <nav>
+        <nav className="nav_bar">
+        <img className='header_logo' alt='little lemon logo' src={logo}/>
             <ul>
                 <Link to="/" className="navLink">Home</Link>
                 <Link to="/about" className="navLink">About</Link>
@@ -30,8 +35,8 @@ export function Nav () {
             <Route path="/order_online" element={<OrderOnline/>}/>
             <Route path="/login" element={<Login/>}/>
         </Routes>
-        </>
 
+        </>
     )
 }
 

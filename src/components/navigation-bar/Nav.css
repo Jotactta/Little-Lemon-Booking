@@ -1,0 +1,17 @@
+.header_logo {
+    height: 70px;
+    margin: 15px 45px;
+}
+
+
+.nav_bar {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: bisque;
+
+}
+

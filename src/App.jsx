@@ -1,12 +1,16 @@
+import {Nav} from './components/navigation-bar/Nav.jsx'
+import {Footer} from './components/footer/Footer.jsx';
+
+
 import './App.css'
-import Header from './components/navigation-bar/Header.jsx';
 
 
 function App() {
   return (
-    <>
-    <Header/>
-    </>
+    <div>
+      <Nav/>
+      <Footer/>
+    </div>
   )
 }
 

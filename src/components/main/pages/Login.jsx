@@ -1,12 +1,7 @@
-import {LoginContent} from '../content/LoginContent.jsx';
-import {Footer} from '../../footer/Footer.jsx';
-
-
 function Login() {
   return (
     <>
-      <LoginContent/>
-      <Footer/>
+    <h1>LOGIN</h1>
     </>
   );
 }
