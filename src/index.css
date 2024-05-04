@@ -3,3 +3,33 @@
     margin: 0px;
     padding: 0px;
 }
+
+
+
+
+
+/* Text Style */
+
+h1 {
+    font-family: 'Markazi Text';
+    font-size: 60px;
+    font-weight: 450;
+}
+
+h2 {
+    font-family: 'Markazi Text';
+    font-size: 40px;
+}
+
+h3 {
+    font-family: 'Karla';
+    font-size: 20px;
+    font-weight: 700;
+}
+
+p {
+    font-family: 'Karla';
+    font-size: 16px;
+    line-height: 1.5;
+  }
+

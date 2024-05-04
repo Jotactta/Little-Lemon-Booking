@@ -1,0 +1,25 @@
+.footer_nav_bar {
+    width: 18%;
+    padding: 20px 0;
+
+}
+
+.footer_nav_bar ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: left;
+
+    padding-top: 10px;
+
+}
+
+
+
+.footerNavLink {
+    text-decoration: none;
+    font-family: "Karla", sans-serif;
+    font-weight: bold;
+    color: black;
+    font-size: 16px;
+}

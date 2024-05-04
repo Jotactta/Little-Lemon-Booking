@@ -1,0 +1,52 @@
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    background-color: #EDEFEE;
+}
+
+.footer_logo {
+    width: 18%;
+    align-self: center;
+}
+
+.contact {
+    width: 18%;
+    padding: 20px 0;
+
+}
+
+.contact > div {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.contact_info {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.footer_icon {
+    height: 30px;
+}
+
+.social_media {
+    width: 18%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    padding: 20px 0;
+}
+
+.social_media_links {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+
+    padding-top: 10px;
+}

@@ -15,6 +15,7 @@ import './Nav.css';
 export function Nav () {
     return (
         <>
+        <header>
         <nav className="nav_bar">
         <img className='header_logo' alt='little lemon logo' src={logo}/>
             <ul>
@@ -26,6 +27,7 @@ export function Nav () {
                 <Link to="/login" className="navLink">Login</Link>
             </ul>
         </nav>
+        </header>
 
         <Routes>
             <Route path="/" element={<Home/>}/>
