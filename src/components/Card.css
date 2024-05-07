@@ -1,0 +1,42 @@
+.card {
+    width: 300px;
+    height: 450px;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+
+    background-color: #EDEFEE;
+    box-shadow: 3px 3px 15px rgba(0,0,0, 0.3);
+
+}
+
+.card_image {
+    height: 50%;
+}
+.card_image img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+
+.card_tittle {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 15px;
+}
+
+.price {
+    color: #495E57;
+}
+
+
+.card > p {
+    margin: 5px 15px;
+}
+
+.button_card {
+    position: absolute;
+    left: 10px;
+    bottom: 13px;
+}

@@ -1,4 +1,4 @@
-import {Nav} from './components/navigation-bar/Nav.jsx'
+import {Nav} from './components/navigation-bar/Nav.jsx';
 import {Footer} from './components/footer/Footer.jsx';
 
 

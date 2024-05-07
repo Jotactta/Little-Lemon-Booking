@@ -1,0 +1,248 @@
+.section1 {
+    background-color: #495E57;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+
+    padding: 20px 0;
+
+}
+
+.section1 > div {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.section1 h1 {
+    color: #F4CE14;
+}
+
+.section1 h2 {
+    color: #FFFFFF;
+}
+
+.section1 h3 {
+    color: #FFFFFF;
+}
+
+.button1 {
+    align-self: center;
+    margin-top: 20px;
+}
+
+
+.section1 img {
+    width: 30%;
+    border-radius: 16px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.section2 > h1, .section3 > h1 {
+    width: 100%;
+    padding: 40px 0 5px 0;
+    text-align: center;
+}
+
+.cards {
+    overflow-x: auto;
+}
+
+/* width */
+.cards::-webkit-scrollbar {
+    height: 15px;
+  }
+
+  /* Track */
+  .cards::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 5px;
+  }
+
+  /* Handle */
+  .cards::-webkit-scrollbar-thumb {
+    background-color: #EE9972;
+    border-radius: 10px;
+  }
+
+
+.cards > div {
+    width: 150%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 5px 25px 25px 25px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.section3 {
+    background-color: #495E57;
+    margin-top: 10px;
+}
+
+.section3 > h1 {
+    width: 100%;
+    padding: 80px 0 5px 0;
+    text-align: center;
+    color: #ffffff;
+}
+
+.section3 > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    padding-bottom: 120px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.section4 {
+    display: flex;
+    width: 100%;
+}
+
+.section4 > div {
+    width: 50%;
+    height: 740px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sec4_text {
+    gap: 5px;
+    padding: 0px 40px;
+}
+
+.section4 > div > div {
+    display: flex;
+    height: 300px;
+    width: 90%;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.section4 img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: 3px 3px 15px rgba(0,0,0, 0.3);
+}
+
+sec4_img1 {
+    width: 66%;
+}
+
+sec4_img2 {
+    width: 34%;
+}
+
+sec4_img3 {
+    width: 34%;
+}
+
+sec4_img4 {
+    width: 66%;
+}

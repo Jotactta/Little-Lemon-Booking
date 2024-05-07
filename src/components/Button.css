@@ -1,0 +1,15 @@
+.button a {
+    text-decoration: none;
+    background-color: #F4CE14;
+    display: flex;
+    align-items: center;
+    padding: 6px 20px;
+    width: max-content;
+    border-radius: 16px;
+    box-shadow: 3px 3px 15px rgba(0,0,0, 0.3);
+
+    font-family: 'Karla';
+    font-size: 20px;
+    font-weight: 700;
+    color: #000;
+}
