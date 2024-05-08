@@ -1,6 +1,6 @@
 .header_logo {
-    height: 70px;
-    margin: 15px 45px;
+    height: 70%;
+    margin: 15% 45px;
 }
 
 
@@ -27,4 +27,50 @@
     font-weight: bold;
     color: black;
     font-size: 16px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --------------------RESPONSIE DESIGN --------------------- */
+
+
+@media only screen and (max-width: 600px) {
+
+    .header_logo {
+        height: max-content;
+        width: 60%;
+        margin: 10px 10px 15px 10px;
+    }
+
+    .nav_bar {
+        height: max-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .nav_bar ul{
+        height: min-content;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin: 0 0 15px 0;
+        row-gap: 15px;
+    }
+
 }

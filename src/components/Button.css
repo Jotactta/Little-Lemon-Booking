@@ -13,3 +13,20 @@
     font-weight: 700;
     color: #000;
 }
+
+
+
+
+
+
+/* --------------------RESPONSIE DESIGN --------------------- */
+
+
+@media only screen and (max-width: 600px) {
+
+    .button a {
+        padding: 3px 10px;
+        font-size: 16px;
+    }
+
+}

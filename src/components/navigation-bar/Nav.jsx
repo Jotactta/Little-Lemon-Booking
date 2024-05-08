@@ -18,7 +18,7 @@ export function Nav () {
         <header>
         <nav className="nav_bar">
         <img className='header_logo' alt='little lemon logo' src={logo}/>
-            <ul>
+        <ul>
                 <Link to="/" className="navLink">Home</Link>
                 <Link to="/about" className="navLink">About</Link>
                 <Link to="/menu" className="navLink">Menu</Link>

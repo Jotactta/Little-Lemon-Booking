@@ -113,7 +113,7 @@ function Home() {
           <p>{TEXT2}</p>
         </div>
 
-        <div>
+        <div className='sec4_images'>
           <div>
             <div className='sec4_img1'><img src={image2} alt='Mario and Adrian pic' /></div>
             <div className='sec4_img2'><img src={image3} alt='Mario and Adrian pic' /></div>

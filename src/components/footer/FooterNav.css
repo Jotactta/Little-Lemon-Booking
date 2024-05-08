@@ -23,3 +23,23 @@
     color: black;
     font-size: 16px;
 }
+
+
+
+
+/* --------------------RESPONSIE DESIGN --------------------- */
+
+
+@media only screen and (max-width: 600px) {
+
+    .footer_nav_bar {
+        width: 25%;
+        padding: 10px 0;
+    }
+
+    .footer_nav_bar ul{
+        gap: 5px;
+        padding-top: 5px;
+    }
+
+}

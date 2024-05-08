@@ -50,3 +50,54 @@ footer {
 
     padding-top: 10px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+/* --------------------RESPONSIE DESIGN --------------------- */
+
+
+@media only screen and (max-width: 600px) {
+
+    footer {
+        padding: 0px 10px;
+    }
+    .footer_logo {
+        display: none;
+    }
+
+    footer h3 {
+        font-size: 16px;
+    }
+
+    footer p {
+        font-size: 14px;
+    }
+
+    .footer_icon {
+        height: 15px;
+    }
+
+    .contact {
+        width: 33%;
+        padding: 10px 0;
+    }
+
+    .contact > div {
+        padding-top: 5px;
+    }
+
+    .social_media {
+        width: 33%;
+        padding: 10px 0;
+        align-items: flex-end;
+    }
+}

@@ -57,26 +57,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .section2 > h1, .section3 > h1 {
     width: 100%;
     padding: 40px 0 5px 0;
@@ -128,34 +108,12 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .section3 {
     background-color: #495E57;
     margin-top: 10px;
 }
 
 .section3 > h1 {
-    width: 100%;
-    padding: 80px 0 5px 0;
-    text-align: center;
     color: #ffffff;
 }
 
@@ -181,28 +139,12 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .section4 {
     display: flex;
     width: 100%;
 }
 
-.section4 > div {
+.sec4_text, .sec4_images {
     width: 50%;
     height: 740px;
     display: flex;
@@ -231,18 +173,149 @@
     box-shadow: 3px 3px 15px rgba(0,0,0, 0.3);
 }
 
-sec4_img1 {
+.sec4_img1 {
     width: 66%;
 }
 
-sec4_img2 {
+.sec4_img2 {
     width: 34%;
 }
 
-sec4_img3 {
+.sec4_img3 {
     width: 34%;
 }
 
-sec4_img4 {
+.sec4_img4 {
     width: 66%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --------------------RESPONSIE DESIGN --------------------- */
+
+
+@media only screen and (max-width: 600px) {
+    .section1 {
+        padding: 15px 10px;
+        gap: 10px;
+    }
+
+    .section1 > div {
+        width: 50%;
+        gap: 0px;
+        border-color: #F4CE14;
+    }
+
+    .section1 h1 {
+        font-size: 45px;
+    }
+
+    .section1 h2 {
+        font-size: 30px;
+    }
+
+    .section1 h3 {
+        font-size: 16px;
+    }
+
+    .button1 {
+        margin-top: 10px;
+    }
+
+    .section1 img {
+        width: 42%;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .section2 > h1, .section3 > h1, .sec4_text > h1 {
+
+        padding: 15px 0 5px 0;
+        font-size: 40px;
+
+    }
+
+
+    .cards > div {
+        width: 300%;
+        padding: 5px 15px 15px 15px;
+        justify-content:flex-start;
+        gap: 20px;
+
+    }
+
+
+
+
+
+
+
+
+    .section3 > div {
+        gap: 10px;
+        padding-bottom: 40px;
+        flex-wrap: wrap;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .section4 {
+        display: flex;
+        width: 100%;
+    }
+
+
+    .sec4_images , .sec4_images > div > div {
+        display: none;
+    }
+
+    .sec4_text {
+        width: 100%;
+        height: max-content;
+        gap: 5px;
+        padding: 25px 20px;
+    }
 }
