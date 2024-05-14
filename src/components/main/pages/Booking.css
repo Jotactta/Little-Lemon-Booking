@@ -1,0 +1,100 @@
+.booking_form {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    gap: 20px;
+}
+
+.booking_form label h3 {
+    display: block;
+    cursor: pointer;
+    margin-bottom: 3px;
+}
+
+.form_group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.booking_form select,
+.booking_form input {
+    width: 100%;
+    background-color: #ffffff;
+    border: 3px solid transparent;
+    border-radius: 16px;
+    height: 32px;
+    line-height: 32px;
+    font-size: 20px;
+    font-family: 'Karla';
+    padding-left: 5px;
+    transition: 0.3s ease all;
+}
+
+.booking_form select:focus,
+.booking_form input:focus {
+    outline: none;
+    border: 3px solid #0075FF;
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.3);
+
+}
+
+.booking_form select:hover,
+.booking_form input:hover {
+    cursor: pointer;
+}
+
+.date {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.date::-webkit-calendar-picker-indicator {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: transparent;
+    background: 0 0;
+    margin: 0;
+    opacity: 0;
+    pointer-events: auto;
+    cursor: pointer;
+
+}
+
+
+
+
+
+
+
+
+
+
+/* --------------------RESPONSIE DESIGN --------------------- */
+
+
+@media only screen and (max-width: 600px) {
+    .booking_form label h3, .booking_tittle {
+        color: #495E57;
+    }
+
+    .booking_tittle {
+        font-family: 'Karla';
+        font-size: 28px;
+        font-weight: 750;
+        padding: 10px 0;
+    }
+
+    .booking_form select,
+    .booking_form input {
+        background-color: #EDEFEE;
+
+    }
+
+
+}

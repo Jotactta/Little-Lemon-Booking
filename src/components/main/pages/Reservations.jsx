@@ -1,8 +1,17 @@
+import Booking from "./Booking.jsx";
+
+import image6 from "../../../assets/images/image6.png";
+
+import './Reservations.css';
+
+
 function Reservations() {
   return (
-    <>
-    <h1>RESERVATIONS</h1>
-    </>
+    <section className="booking">
+      <img src={image6} alt="Restaurant table image" />
+
+      <Booking className="booking_card" tittle="Make a reservation" />
+    </section>
   );
 }
 
