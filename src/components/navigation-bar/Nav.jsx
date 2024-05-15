@@ -12,7 +12,7 @@ import './Nav.css';
 
 
 
-export function Nav () {
+export function Nav ({times, dispatch}) {
     return (
         <>
         <header>
@@ -33,7 +33,7 @@ export function Nav () {
             <Route path="/" element={<Home/>}/>
             <Route path="/about" element={<About/>}/>
             <Route path="/menu" element={<Menu/>}/>
-            <Route path="/reservations" element={<Reservations/>}/>
+            <Route path="/reservations" element={<Reservations times={times} dispatch={dispatch}/>}/>
             <Route path="/order_online" element={<OrderOnline/>}/>
             <Route path="/login" element={<Login/>}/>
         </Routes>

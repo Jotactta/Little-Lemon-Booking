@@ -3,7 +3,7 @@ import { useState, useRef } from 'react';
 import './Booking.css';
 
 
-function Booking({ className, tittle }) {
+function Booking({ className, tittle, times, dispatch }) {
 
   const [guests, setGuests] = useState(1);
   const date = useRef(new Date().toISOString().slice(0, 10));
@@ -21,6 +21,11 @@ function Booking({ className, tittle }) {
     time= ${time}
     table= ${table}
     occasio=${occasion}`);
+  }
+
+  const handleChange = (e) => {
+    date.current = (e.target.value);
+    dispatch(e.target.value)
   }
 
   return (
@@ -48,19 +53,21 @@ function Booking({ className, tittle }) {
         <div className='form_group'>
           <div>
             <label htmlFor="res-date"><h3>Choose date</h3></label>
-            <input type="date" id="res-date" className='date' min={date.current} onChange={(e) => date.current = (e.target.value)} />
+            <input type="date" id="res-date" className='date' min={date.current} onChange={(e) => handleChange(e)} />
           </div>
 
 
           <div>
             <label htmlFor="res-time"><h3>Choose time</h3></label>
             <select id="res-time" name='time' value={time} onChange={(e) => setTime(e.target.value)}>
-              <option value="17:00">17:00</option>
-              <option value="18:00">18:00</option>
-              <option value="19:00">19:00</option>
-              <option value="20:00">20:00</option>
-              <option value="21:00">21:00</option>
-              <option value="22:00">22:00</option>
+
+              {
+                times.map(ava_time => {
+                  return (
+                    <option key={ava_time} value={ava_time}>{ava_time}</option>
+                  )
+                })}
+
             </select>
           </div>
 
