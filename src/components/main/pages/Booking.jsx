@@ -3,7 +3,7 @@ import { useState, useRef } from 'react';
 import './Booking.css';
 
 
-function Booking({ className, tittle, times, dispatch }) {
+export function Booking({ className, tittle, times, dispatch }) {
 
   const [guests, setGuests] = useState(1);
   const date = useRef(new Date().toISOString().slice(0, 10));

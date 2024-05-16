@@ -5,7 +5,11 @@ import { useReducer } from 'react';
 import './App.css'
 
 
-function reducer(state, date) {
+export function initialState () {
+  return ['17:00' , '18:00' , '19:00' , '20:00' , '21:00' , '22:00'];
+}
+
+export function reducer(state, date) {
   console.log(date);
   return state;
 }
@@ -13,9 +17,7 @@ function reducer(state, date) {
 
 function App() {
 
-  const initialState = ['17:00' , '18:00' , '19:00' , '20:00' , '21:00' , '22:00'];
-
-  const [availableTimes, dispatch] = useReducer (reducer, initialState);
+  const [availableTimes, dispatch] = useReducer (reducer, initialState());
 
 
 
