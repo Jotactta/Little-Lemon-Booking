@@ -6,7 +6,7 @@ import './Booking.css';
 export function Booking({ className, tittle, times, dispatch }) {
 
   const [guests, setGuests] = useState(1);
-  const date = useRef(new Date().toISOString().slice(0, 10));
+  const date = useRef(new Date());
   const [time, setTime] = useState("17:00");
   const [table, setTable] = useState("Indoor Table");
   const [occasion, setOccasion] = useState("None");
@@ -25,7 +25,7 @@ export function Booking({ className, tittle, times, dispatch }) {
 
   const handleChange = (e) => {
     date.current = (e.target.value);
-    dispatch(e.target.value)
+    dispatch(e.target.valueAsDate)
   }
 
   return (
@@ -53,7 +53,7 @@ export function Booking({ className, tittle, times, dispatch }) {
         <div className='form_group'>
           <div>
             <label htmlFor="res-date"><h3>Choose date</h3></label>
-            <input type="date" id="res-date" className='date' min={date.current} onChange={(e) => handleChange(e)} />
+            <input type="date" id="res-date" className='date' onChange={(e) => handleChange(e)} />
           </div>
 
 
