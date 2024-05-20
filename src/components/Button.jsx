@@ -1,11 +1,12 @@
+import { Link } from "react-router-dom"
+
+
 import './Button.css'
 
 function Button({children, link, className}) {
     return (
       <div className={className}>
-        <div className='button'>
-        <a href={link} target='_blank'>{children}</a>
-        </div>
+        <Link to={link} className="button">{children}</Link>
       </div>
     );
   }

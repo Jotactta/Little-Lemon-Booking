@@ -1,32 +1,48 @@
-import { useState, useRef } from 'react';
+import { useState, useEffect } from 'react';
+import { useNavigate } from "react-router-dom"
+
 
 import './Booking.css';
 
 
-export function Booking({ className, tittle, times, dispatch }) {
+export function Booking({ className, tittle, times, dispatch, successfulSubmit, submitDispatch }) {
 
   const [guests, setGuests] = useState(1);
-  const date = useRef(new Date());
-  const [time, setTime] = useState("17:00");
+  const [date, setDate] = useState(new Date());
+  const [time, setTime] = useState(times[0]);
   const [table, setTable] = useState("Indoor Table");
   const [occasion, setOccasion] = useState("None");
 
-
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(`form submited
-    guests= ${guests}
-    date= ${date.current}
-    time= ${time}
-    table= ${table}
-    occasio=${occasion}`);
+  const reserveData = {
+    guests: guests,
+    date: date,
+    time: time,
+    table: table,
+    occasion: occasion
   }
 
   const handleChange = (e) => {
-    date.current = (e.target.value);
-    dispatch(e.target.valueAsDate)
+    setDate(new Date(e.target.value.replace(/-/g, '\/')));
+    dispatch({ type: new Date(e.target.value.replace(/-/g, '\/')) })
   }
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    submitDispatch({ isSubmitted: true, submitData: reserveData });
+  }
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+
+    if (successfulSubmit) {
+      navigate("/confirmed_booking", { state: { data: reserveData } });
+    }
+
+  }, [successfulSubmit])
+
+  useEffect(() => {setTime(times[0])}, [date])
+
 
   return (
     <div className={className}>
@@ -93,7 +109,9 @@ export function Booking({ className, tittle, times, dispatch }) {
         </div>
 
 
-        <input type="submit" value="Make Your reservation" />
+        <button type='submit'>Reserve</button>
+
+
       </form>
     </div>
   );
