@@ -35,27 +35,27 @@ export function updateTimes(state, action) {
   return fetchAPI(action.type);
 }
 
+function submitAPI(formData) {
+  return true
+}
+
+
+export function submitForm(state, action) {
+
+  if (!action.submitData) return false;
+
+  const isReserved = submitAPI(action.submitData);
+  if (isReserved && action.isSubmitted) {
+    return true;
+  }
+  else return false;
+}
 
 function App() {
 
   const [availableTimes, dispatch] = useReducer(updateTimes, initialState());
   const [successfulSubmit, submitDispatch] = useReducer(submitForm, false);
 
-  function submitAPI(formData) {
-    console.log(formData)
-    return true
-  }
-
-  function submitForm(state, action) {
-
-    if (!action.submitData) return false;
-
-    const isReserved = submitAPI(action.submitData);
-    if (isReserved && action.isSubmitted) {
-      return true;
-    }
-    else return false;
-  }
 
 
   return (

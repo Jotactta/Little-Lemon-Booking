@@ -11,9 +11,9 @@ import './FooterNav.css';
 
 
 
-export function FooterNav () {
+export function FooterNav() {
     return (
-        <>
+
         <nav className="footer_nav_bar">
             <h3>Our Website</h3>
             <ul>
@@ -25,7 +25,7 @@ export function FooterNav () {
                 <Link to="/login" className="footerNavLink">Login</Link>
             </ul>
         </nav>
-        </>
+
     )
 }
 

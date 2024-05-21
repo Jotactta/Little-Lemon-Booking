@@ -3,7 +3,7 @@ import './Card.css';
 
 function Card({ image, tittle, price, text }) {
   return (
-    <div className="card">
+    <article className="card">
 
       <div className="card_image"><img src={image} alt={`${tittle} image`} /></div>
 
@@ -15,7 +15,7 @@ function Card({ image, tittle, price, text }) {
       <p>{text}</p>
 
       <Button className="button_card" link="/order_online">Order Online</Button>
-    </div>
+    </article>
   );
 }
 

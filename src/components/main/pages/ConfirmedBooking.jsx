@@ -1,6 +1,8 @@
 import { useLocation } from "react-router-dom";
 import { useEffect } from 'react';
 
+import Button from '../../Button.jsx';
+
 import check_icon from "../../../assets/images/icons/check_icon.png";
 import calendar_icon from "../../../assets/images/icons/calendar_icon.png";
 import time_icon from "../../../assets/images/icons/time_icon.png";
@@ -38,7 +40,7 @@ function ConfirmedBooking({ submitDispatch }) {
   return (
     <section className="conf_booking">
       <article className="book_conf">
-        <img src={check_icon} />
+        <img src={check_icon} alt="check icon" />
         <h1>Booking Confirmed!</h1>
 
       </article>
@@ -46,7 +48,7 @@ function ConfirmedBooking({ submitDispatch }) {
       <article className="dinner_details">
         <h2>Dinner Details</h2>
 
-        <div>
+        <div className="reserve_info">
           <div>
             <img src={calendar_icon} />
             <h3>{DAYS[day]}, {MONTHS[month]} {dayNumber}</h3>
@@ -78,6 +80,9 @@ function ConfirmedBooking({ submitDispatch }) {
           </div>
 
         </div>
+
+        <Button className="back_button" link="/">Go Back Home</Button>
+
       </article>
 
 

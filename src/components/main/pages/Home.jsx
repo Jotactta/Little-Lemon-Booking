@@ -61,16 +61,16 @@ const TEXT2 = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer 
 
 function Home() {
   return (
-    <>
+    <main>
       <section className='section1'>
-        <div>
+        <article>
           <h1>Little Lemon</h1>
           <h2>Chicago</h2>
           <h3>{TEXT1}</h3>
           <Button className="button1" link="/reservations">Reserve a Table</Button>
-        </div>
+        </article>
 
-        <img src={image1} />
+        <img src={image1} alt='Little Lemon food image'/>
 
       </section>
 
@@ -107,25 +107,25 @@ function Home() {
 
 
       <section className='section4'>
-        <div className='sec4_text'>
+        <article className='sec4_text'>
           <h1>Little Lemon</h1>
           <h3>Chicago</h3>
           <p>{TEXT2}</p>
-        </div>
+        </article>
 
         <div className='sec4_images'>
           <div>
-            <div className='sec4_img1'><img src={image2} alt='Mario and Adrian pic' /></div>
+            <div className='sec4_img1'><img src={image2} alt='Little Lemon Restaurant pic' /></div>
             <div className='sec4_img2'><img src={image3} alt='Mario and Adrian pic' /></div>
           </div>
 
           <div>
-            <div className='sec4_img3'><img src={image4} alt='Mario and Adrian pic' /></div>
+            <div className='sec4_img3'><img src={image4} alt='Adrian pic' /></div>
             <div className='sec4_img4'><img src={image5} alt='Mario and Adrian pic' /></div>
           </div>
         </div>
       </section>
-    </>
+    </main>
   );
 }
 

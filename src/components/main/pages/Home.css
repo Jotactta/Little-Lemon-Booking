@@ -9,7 +9,7 @@
 
 }
 
-.section1 > div {
+.section1 > article {
     width: 400px;
     display: flex;
     flex-direction: column;

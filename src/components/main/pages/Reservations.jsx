@@ -7,11 +7,11 @@ import './Reservations.css';
 
 function Reservations({times, dispatch, successfulSubmit, submitDispatch}) {
   return (
-    <section className="booking">
+    <main className="booking">
       <img src={image6} alt="Restaurant table image" />
 
       <Booking className="booking_card" tittle="Make a reservation" times={times} dispatch={dispatch} successfulSubmit={successfulSubmit} submitDispatch={submitDispatch}/>
-    </section>
+    </main>
   );
 }
 
