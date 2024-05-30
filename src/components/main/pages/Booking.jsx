@@ -166,7 +166,7 @@ export function Booking({ className, tittle, times, dispatch, successfulSubmit, 
             <select id="occasion" name='occasion' value={occasion} onChange={(e) => setOccasion(e.target.value)}>
               <option value="None">None</option>
               <option value="Birthday">Birthday</option>
-              <option value="Anniersary">Anniversary</option>
+              <option value="Anniversary">Anniversary</option>
             </select>
           </div>
 
