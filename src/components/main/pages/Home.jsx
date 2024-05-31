@@ -9,7 +9,7 @@ import image4 from '../../../assets/images/image4.jpg';
 import image5 from '../../../assets/images/image5.jpg';
 
 import simage1 from '../../../assets/images/simage1.jpg';
-import simage2 from '../../../assets/images/simage2.svg';
+import simage2 from '../../../assets/images/simage2.jpg';
 import simage3 from '../../../assets/images/simage3.jpg';
 import simage4 from '../../../assets/images/simage4.jpg';
 import simage5 from '../../../assets/images/simage5.jpg';
