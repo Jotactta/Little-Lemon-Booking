@@ -20,11 +20,7 @@
     color: #F4CE14;
 }
 
-.section1 h2 {
-    color: #FFFFFF;
-}
-
-.section1 h3 {
+.section1 h2, .section1 h3 {
     color: #FFFFFF;
 }
 
@@ -222,7 +218,7 @@
         gap: 10px;
     }
 
-    .section1 > div {
+    .section1 > article {
         width: 50%;
         gap: 0px;
         border-color: #F4CE14;

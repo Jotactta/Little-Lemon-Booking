@@ -51,7 +51,7 @@ export function Footer() {
 
 
             <section className='social_media'>
-                <h3>Social Media</h3>
+                <h3>Follow Us</h3>
 
                 <div className='social_media_links'>
                     <div>
