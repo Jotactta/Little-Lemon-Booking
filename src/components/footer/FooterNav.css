@@ -43,3 +43,11 @@
     }
 
 }
+
+@media only screen and (max-width: 435px) {
+
+    .footer_nav_bar {
+        display: none;
+    }
+
+}

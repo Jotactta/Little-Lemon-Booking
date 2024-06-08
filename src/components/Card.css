@@ -1,6 +1,6 @@
 .card {
-    width: 300px;
-    height: 450px;
+    width: 280px;
+    height: 410px;
     border-radius: 16px;
     overflow: hidden;
     position: relative;
@@ -11,7 +11,7 @@
 }
 
 .card_image {
-    height: 50%;
+    height: 45%;
 }
 .card_image img {
     object-fit: cover;
@@ -33,6 +33,8 @@
 
 .card > p {
     margin: 5px 15px;
+    line-height: 1.35;
+
 }
 
 .button_card {
@@ -62,16 +64,29 @@
 /* --------------------RESPONSIE DESIGN --------------------- */
 
 
+@media only screen and (max-width: 950px) {
+
+    .card {
+        width: 265px;
+        height: 400px;
+    }
+
+    .card_tittle {
+        margin: 5px 10px;
+    }
+
+    .card > p {
+        line-height: 1.3;
+    }
+
+}
+
+
 @media only screen and (max-width: 600px) {
 
     .card {
-        width: 220px;
-        height: 370px;
-    }
-
-
-    .card_image {
-        height: 35%;
+        width: 240px;
+        height: 340px;
     }
 
     .card_tittle {
@@ -82,14 +97,9 @@
         font-size: 18px;
     }
 
-
     .card > p {
         margin: 5px 10px;
-        font-size: 16px;
-        line-height: 1.4;
+        font-size: 14px;
     }
-
-
-
 
 }

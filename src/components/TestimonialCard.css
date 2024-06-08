@@ -45,6 +45,7 @@
 
 
 
+
 /* --------------------RESPONSIE DESIGN --------------------- */
 
 
@@ -65,4 +66,15 @@
 
 
 
+}
+
+@media only screen and (max-width: 400px) {
+
+    .t_card {
+        width: 160px;
+    }
+
+    .t_card p {
+        font-size: 14px;
+    }
 }

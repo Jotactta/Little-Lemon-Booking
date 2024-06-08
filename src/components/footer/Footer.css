@@ -45,7 +45,7 @@ footer {
 
 .social_media_links {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 5px;
 
     padding-top: 10px;
@@ -64,15 +64,27 @@ footer {
 
 /* --------------------RESPONSIE DESIGN --------------------- */
 
+@media only screen and (max-width: 925px) {
 
+    .footer_logo {
+        display: none;
+    }
+
+    .contact {
+        width: 45%;
+    }
+
+    .social_media {
+        width: 21%;
+    }
+
+}
 @media only screen and (max-width: 600px) {
 
     footer {
         padding: 0px 10px;
     }
-    .footer_logo {
-        display: none;
-    }
+
 
     footer h3 {
         font-size: 16px;
@@ -87,7 +99,6 @@ footer {
     }
 
     .contact {
-        width: 33%;
         padding: 10px 0;
     }
 
@@ -96,8 +107,20 @@ footer {
     }
 
     .social_media {
-        width: 33%;
         padding: 10px 0;
-        align-items: flex-end;
+        align-items: center;
     }
+}
+
+
+@media only screen and (max-width: 435px) {
+
+    .contact {
+        width: 65%;
+    }
+
+    .social_media {
+        width: 30%;
+    }
+
 }
