@@ -18,7 +18,7 @@ function HomeSection1 () {
   return (
     <section className='home'>
       <div className='homeContainer'>
-        <div className='gradient'>
+        <div className={`gradient ${isLoaded}`}>
           <h1 className={`${isLoaded}`}>Little Lemon</h1>
           <h2 className={`${isLoaded}`}>Chicago</h2>
           <h3 className={`${isLoaded}`}>We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.</h3>
