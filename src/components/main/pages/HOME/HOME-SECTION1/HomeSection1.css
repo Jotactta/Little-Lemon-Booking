@@ -1,0 +1,200 @@
+.home {
+    padding: 0;
+    width: 100%;
+}
+
+.homeContainer {
+    position: relative;
+}
+
+.gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-left: 60px;
+    box-sizing: border-box;
+
+
+    width: 45%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.7) 80%, rgba(0, 0, 0, 0.5) 90%, rgba(0, 0, 0, 0) 100%);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    z-index: 3;
+}
+
+.gradient h1 {
+    color: #F4CE14;
+    align-self: start;
+    padding: 0;
+    margin: 0;
+
+    transition: all 1.5s linear;
+}
+
+.gradient h1.notLoad {
+    opacity: 0;
+    transform: translateX(50px);
+}
+
+.gradient h1.load {
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+.gradient h2 {
+    color: #fff;
+    padding-right: 7%;
+    transition: all 1.5s linear;
+}
+
+.gradient h2.notLoad {
+    opacity: 0;
+    transform: translateX(50px);
+}
+
+.gradient h2.load {
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+.gradient h3 {
+    color: #fff;
+    padding-right: 7%;
+
+    transition: all 1.5s linear;
+}
+
+.gradient h3.notLoad {
+    opacity: 0;
+    transform: translateX(50px);
+}
+
+.gradient h3.load {
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+.gradient .button1 {
+    align-self: center;
+    margin-top: 10px;
+    padding-right: 7%;
+
+    transition: all 1.5s linear;
+}
+
+.gradient .button1.notLoad {
+    opacity: 0;
+    transform: translateX(50px);
+}
+
+.gradient .button1.load {
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+/* --------------------RESPONSIE DESIGN --------------------- */
+
+
+@media only screen and (max-width: 900px) {
+    .gradient {
+        padding-left: 40px;
+    }
+
+    .gradient h1 {
+        font-size: 50px;
+    }
+
+    .gradient h2 {
+        font-size: 35px;
+        padding-right: 3%;
+    }
+
+    .gradient h3 {
+        font-size: 18px;
+        padding-right: 3%;
+    }
+}
+
+@media only screen and (max-width: 780px) {
+    .gradient {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .gradient h1 {
+        font-size: 40px;
+    }
+
+    .gradient h2 {
+        font-size: 32px;
+    }
+
+    .gradient h3 {
+        font-size: 16px;
+    }
+
+    .gradient .button1 .button {
+        padding: 4px 12px;
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .gradient {
+        width: 55%;
+        padding-left: 20px;
+    }
+
+}
+
+@media only screen and (max-width: 550px) {
+    .gradient {
+        width: 60%;
+        padding-left: 12px;
+        background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.7) 40%, rgba(0, 0, 0, 0.6) 80%, rgba(0, 0, 0, 0) 100%);
+    }
+
+}
+
+@media only screen and (max-width: 480px) {
+
+
+    .gradient h2 {
+        font-size: 25px;
+    }
+
+    .gradient h3 {
+        font-size: 15px;
+    }
+
+}
+
+@media only screen and (max-width: 350px) {
+    .gradient {
+        width: 100%;
+        padding-left: 10px;
+        background: none;
+        background-color: rgba(0, 0, 0, 0.55);
+        box-sizing: border-box;
+    }
+
+    .gradient h1 {
+        font-size: 35px;
+    }
+
+}
+
+@media only screen and (max-width: 300px) {
+
+
+
+    .gradient h2 {
+        font-size: 24px;
+    }
+
+}

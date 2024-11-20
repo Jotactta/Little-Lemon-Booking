@@ -1,0 +1,91 @@
+* {
+    --width: 100%;
+}
+
+
+.selectLabel h3 {
+    display: block;
+    font-size: 20px;
+    width: var(--width);
+
+    padding: 0px 0px 2px 4px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.reserveTimeInput div {
+    position: relative;
+}
+
+
+.reserveTimeInput select {
+    position: relative;
+    box-sizing: border-box;
+    padding: 0 35px 0 5px;
+
+    font-size: 20px;
+    font-family: 'Karla';
+
+    width: var(--width);
+    height: 32px;
+    line-height: 32px;
+
+    border: 3px solid transparent;
+    border-radius: 20px;
+    outline: none;
+
+    background-color: #fff;
+
+    transition: all 0.3s ease;
+
+    cursor: pointer;
+
+
+}
+
+
+.reserveTimeInput select:focus {
+    border-color: rgb(79, 146, 248);
+    box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4);
+}
+
+.reserveTimeInput select.notAvailable {
+    border-color: rgb(221, 53, 53);
+    box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4);
+}
+
+.reserveTimeInput div img {
+    position: absolute;
+    top: 50%;
+    right: 25px;
+    transform: translateY(-50%);
+
+    height: 20px;
+}
+
+
+
+
+
+/* --------------------RESPONSIE DESIGN --------------------- */
+
+@media only screen and (max-width: 400px) {
+    .selectLabel h3 {
+        font-size: 16px;
+
+    }
+
+    .reserveTimeInput select {
+        font-size: 16px;
+        height: 30px;
+        line-height: 30px;
+    }
+
+    .reserveTimeInput div img {
+        right: 22px;
+        height: 18px;
+    }
+
+}

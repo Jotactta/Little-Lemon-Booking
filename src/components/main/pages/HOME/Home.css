@@ -1,0 +1,92 @@
+.home {
+    display: flex;
+    flex-direction: column;
+}
+
+.homeSpecials {
+    width: 100%;
+}
+
+
+
+.section4 {
+    display: flex;
+    width: 100%;
+}
+
+.sec4_text,
+.sec4_images {
+    width: 50%;
+    height: 740px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sec4_text {
+    gap: 5px;
+    padding: 0px 40px;
+}
+
+.section4>div>div {
+    display: flex;
+    height: 220px;
+    width: 90%;
+    gap: 3%;
+    margin-top: 15px;
+}
+
+.section4 img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.3);
+}
+
+.sec4_img1 {
+    width: 66%;
+}
+
+.sec4_img2 {
+    width: 34%;
+}
+
+.sec4_img3 {
+    width: 47%;
+}
+
+.sec4_img4 {
+    width: 50%;
+}
+
+
+/* --------------------RESPONSIE DESIGN --------------------- */
+
+@media only screen and (max-width: 740px) {
+
+
+
+    .sec4_text>h1 {
+        padding: 15px 0 5px 0;
+        font-size: 45px;
+    }
+
+    .section4 {
+        display: flex;
+        width: 100%;
+    }
+
+
+    .sec4_images,
+    .sec4_images>div>div {
+        display: none;
+    }
+
+    .sec4_text {
+        width: 100%;
+        height: max-content;
+        gap: 5px;
+        padding: 25px 20px;
+    }
+}

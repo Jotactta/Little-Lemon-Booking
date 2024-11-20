@@ -1,0 +1,170 @@
+.navContainer {
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 5;
+
+    background-color: rgba(237, 239, 238, 0.85);
+    backdrop-filter: blur(3px);
+
+    transition: all 0.3s linear;
+}
+
+.navContainer.show {
+    opacity: 1;
+}
+
+.navContainer.hide {
+    opacity: 0;
+}
+
+.navMenu {
+    height: 100%;
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-right: 40px;
+}
+
+
+
+.logoContainer.hide {
+    z-index: -10;
+}
+
+.navLogo {
+    height: 70%;
+    margin: 0 20px 0 50px;
+}
+
+.linkContainer {
+    height: 100%;
+    text-decoration: none;
+}
+
+.linkContainer.hide {
+    z-index: -10;
+}
+
+.SCMenuIcon {
+    height: 30px;
+    width: 30px;
+    overflow: hidden;
+
+    display: none;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    border-color: black;
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+.SCMenuIcon img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.SCMenu,
+.SClinkContainer {
+    display: none;
+}
+
+/* --------------------RESPONSIE DESIGN --------------------- */
+
+
+@media only screen and (max-width: 985px) {
+
+    .navContainer {
+        height: 60px;
+    }
+}
+
+
+
+@media only screen and (max-width: 795px) {
+
+    .linkContainer {
+        display: none;
+    }
+
+    .navLogo {
+        margin-left: 20px;
+        height: 80%;
+    }
+
+    .SCMenuIcon {
+        display: block;
+    }
+
+    .SCMenu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        width: max-content;
+
+        position: fixed;
+        top: 60px;
+
+        z-index: 5;
+
+        border-top-left-radius: 10px;
+
+        border-bottom-left-radius: 10px;
+        overflow: hidden;
+
+        background-color: rgba(237, 239, 238, 0.85);
+        backdrop-filter: blur(3px);
+
+        transition: all 0.42s linear;
+
+    }
+
+    .SCMenu.hide {
+        opacity: 0;
+        right: -250px;
+    }
+
+    .SCMenu.show {
+        opacity: 1;
+        right: 0px;
+
+    }
+
+    .SClinkContainer {
+        display: block;
+        width: 100%;
+        text-decoration: none;
+
+        height: 40px;
+
+        border-radius: 5px;
+
+    }
+}
+
+@media only screen and (max-width: 500px) {
+
+    .navContainer {
+        height: 50px;
+    }
+
+    .SCMenu {
+        top: 50px;
+    }
+
+    .SCMenuIcon {
+        height: 28px;
+        width: 28px;
+    }
+}

@@ -1,0 +1,68 @@
+* {
+    --width: 100%;
+}
+
+
+.selectLabel2 h3 {
+    display: block;
+    font-size: 20px;
+    width: var(--width);
+
+    padding: 0px 0px 2px 4px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+
+
+.selectInput2 {
+    box-sizing: border-box;
+    padding-left: 5px;
+
+    font-size: 20px;
+    font-family: 'Karla';
+
+    width: var(--width);
+    height: 32px;
+    line-height: 32px;
+
+    border: 3px solid transparent;
+    border-radius: 20px;
+    outline: none;
+
+    background-color: #fff;
+    cursor: pointer;
+
+
+}
+
+
+.selectInput2:focus {
+    border-color: rgb(79, 146, 248);
+    box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4);
+}
+
+
+
+
+
+/* --------------------RESPONSIE DESIGN --------------------- */
+
+@media only screen and (max-width: 400px) {
+    .selectLabel2 h3 {
+        font-size: 17px;
+
+    }
+
+    .selectInput2 {
+        font-size: 16px;
+        height: 30px;
+        line-height: 30px;
+        padding: 0 25px 0 5px;
+
+    }
+
+}

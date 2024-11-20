@@ -1,0 +1,64 @@
+.booking {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.booking>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.booking_card {
+    width: 440px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0 25px 0;
+
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(247, 249, 248, 0.85);
+    backdrop-filter: blur(3px);
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.3);
+
+    border-radius: 16px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --------------------RESPONSIE DESIGN --------------------- */
+
+
+@media only screen and (max-width: 500px) {
+    .booking_card {
+        top: 0;
+        left: 0;
+        transform: translate(0%, 0%);
+
+        height: 100%;
+        width: 100%;
+        background-color: rgba(247, 249, 248, 0.82);
+        backdrop-filter: blur(3px);
+        box-shadow: none;
+        border-radius: 0px;
+        box-sizing: border-box;
+    }
+
+
+}

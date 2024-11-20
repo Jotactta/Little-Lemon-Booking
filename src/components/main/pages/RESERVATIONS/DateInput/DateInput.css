@@ -1,0 +1,122 @@
+* {
+    --width: 100%;
+}
+
+
+
+.dateInputLabel h3 {
+    display: block;
+    font-size: 20px;
+    width: var(--width);
+    max-width: 400px;
+
+
+    padding: 0px 0px 2px 4px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+.dateInputContainer {
+    position: relative;
+    width: var(--width);
+    max-width: 400px;
+
+
+}
+
+.dateInputContainer input {
+    position: relative;
+    box-sizing: border-box;
+    padding: 0 35px 0 5px;
+
+    font-size: 20px;
+    font-family: 'Karla';
+
+    width: var(--width);
+    height: 32px;
+    line-height: 32px;
+
+    border: 3px solid transparent;
+    border-radius: 20px;
+    outline: none;
+
+    background-color: #fff;
+
+    transition: all 0.3s ease;
+}
+
+.dateInputContainer input:focus {
+    border-color: rgb(79, 146, 248);
+    box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4);
+}
+
+.dateInputContainer input.invalidDate {
+    border-color: rgb(221, 53, 53);
+    box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4);
+}
+
+.dateInputContainer input::-webkit-calendar-picker-indicator {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: transparent;
+    background: 0 0;
+    margin: 0;
+    opacity: 0;
+    pointer-events: auto;
+    cursor: pointer;
+
+}
+
+.dateInputContainer input:-webkit-autofill {
+    -webkit-background-composite: inherit;
+}
+
+.dateInputContainer input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 50px white inset;
+}
+
+
+.dateInputContainer img {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+
+    height: 20px;
+}
+
+.errorMessage {
+    font-size: 14px;
+    color: rgb(230, 46, 14);
+    padding: 2px 5px 0px 5px;
+    width: var(--width);
+    font-weight: 700;
+
+}
+
+/* --------------------RESPONSIE DESIGN --------------------- */
+
+@media only screen and (max-width: 400px) {
+    .dateInputLabel h3 {
+        font-size: 16px;
+    }
+
+    .dateInputContainer input {
+        font-size: 16px;
+        height: 30px;
+        line-height: 30px;
+        padding: 0 25px 0 5px;
+
+    }
+
+    .dateInputContainer img {
+        right: 10px;
+        height: 18px;
+    }
+}

@@ -1,0 +1,264 @@
+.conf_booking {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.conf_booking>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cb_card {
+    width: 440px;
+    height: 371.33px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 0px 0 25px 0;
+
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(247, 249, 248, 0.85);
+    backdrop-filter: blur(3px);
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.3);
+
+    border-radius: 16px;
+    box-sizing: border-box;
+
+}
+
+.loadingScreen {
+    display: flex;
+    flex-direction: column;
+    margin-top: 123.665px;
+
+}
+
+.loading_gif {
+    background-color: rgba(0, 0, 0, 0);
+    height: 100px;
+}
+
+.cb_message {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
+    opacity: 1;
+
+    transition: all 0.7s linear;
+}
+
+@starting-style {
+
+    .cb_message {
+        opacity: 0;
+    }
+
+}
+
+.confirmMessage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.cb_message img {
+    height: 40px;
+}
+
+.cb_message h1 {
+    width: 100%;
+    font-size: 50px;
+    text-align: center;
+    line-height: 40px;
+}
+
+.cb_button {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.dinner_details {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
+    opacity: 1;
+    animation: fadeInAnimation 2s;
+
+}
+
+@keyframes fadeInAnimation {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.dinner_details h1 {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 100%;
+    text-align: center;
+    font-size: 50px;
+    line-height: 40px;
+    color: #495E57;
+
+}
+
+.dinner_details h3 {
+    color: #000;
+}
+
+.reserve_info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 80%;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.reserve_info>div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.reserve-info-item {
+    display: flex;
+    justify-content: flex-start;
+    gap: 5px;
+    align-items: center;
+
+    width: 100%%;
+}
+
+.reserve_info img {
+    width: 25px;
+}
+
+.back_button {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+
+
+
+
+
+
+
+
+
+/* --------------------RESPONSIE DESIGN --------------------- */
+
+
+@media only screen and (max-width: 500px) {
+    .cb_card {
+        top: 0;
+        left: 0;
+        transform: translate(0%, 0%);
+        justify-content: center;
+
+        height: 100%;
+        width: 100%;
+        background-color: rgba(247, 249, 248, 0.82);
+        backdrop-filter: blur(3px);
+        box-shadow: none;
+        border-radius: 0px;
+        box-sizing: border-box;
+    }
+
+    .loadingScreen {
+        margin-top: 0;
+    }
+
+    .cb_button,
+    .back_button {
+        bottom: 90px;
+    }
+
+    .dinner_details h1 {
+        top: 130px;
+    }
+
+    .reserve_info {
+        width: 70%;
+    }
+
+}
+
+@media only screen and (max-width: 460px) {
+    .reserve_info {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+
+    .cb_message h1 {
+        font-size: 40px;
+    }
+
+    .dinner_details h1 {
+        font-size: 45px;
+    }
+
+    .dinner_details h3 {
+        font-size: 18px;
+    }
+
+    .reserve_info img {
+        width: 22px;
+    }
+
+
+}
+
+
+@media only screen and (max-width: 350px) {
+    .reserve_info {
+        width: 87%;
+    }
+
+    .dinner_details h3 {
+        font-size: 16.5px;
+    }
+
+    .reserve_info img {
+        width: 20px;
+    }
+
+}

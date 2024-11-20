@@ -1,0 +1,81 @@
+.about {
+    display: flex;
+    width: 100%;
+}
+
+.aboutText,
+.aboutImages {
+    width: 50%;
+    height: 740px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.aboutText {
+    gap: 5px;
+    padding: 0px 40px;
+}
+
+.about>div>div {
+    display: flex;
+    height: 220px;
+    width: 90%;
+    gap: 3%;
+    margin-top: 15px;
+}
+
+.about img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.3);
+}
+
+.about_img1 {
+    width: 66%;
+}
+
+.about_img2 {
+    width: 34%;
+}
+
+.about_img3 {
+    width: 47%;
+}
+
+.about_img4 {
+    width: 50%;
+}
+
+
+/* --------------------RESPONSIE DESIGN --------------------- */
+
+@media only screen and (max-width: 740px) {
+
+
+
+    .aboutText>h1 {
+        padding: 15px 0 5px 0;
+        font-size: 45px;
+    }
+
+    .about {
+        display: flex;
+        width: 100%;
+    }
+
+
+    .aboutImages,
+    .aboutImages>div>div {
+        display: none;
+    }
+
+    .aboutText {
+        width: 100%;
+        height: max-content;
+        gap: 5px;
+        padding: 25px 20px;
+    }
+}
