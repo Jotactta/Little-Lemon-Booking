@@ -1,3 +1,6 @@
+import { useState, useEffect } from 'react'
+
+import LoadingScreen from '../HOME/LoadingScreen/LoadingScreen'
 import Booking from './Booking.jsx'
 
 import image6 from '../../../../assets/images/image6.png'
@@ -5,12 +8,23 @@ import image6 from '../../../../assets/images/image6.png'
 import './Reservations.css'
 
 function Reservations ({ times, dispatch, successfulSubmit, submitDispatch }) {
-  return (
-    <main className='booking'>
-      <img src={image6} alt='Restaurant table image' />
+  const [isLoading, setIsLoading] = useState('notLoad')
 
-      <Booking className='booking_card' tittle='Make a reservation' times={times} dispatch={dispatch} successfulSubmit={successfulSubmit} submitDispatch={submitDispatch} />
-    </main>
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading('load')
+    }, '1500')
+  }, [])
+  return (
+    <>
+      <LoadingScreen isLoading={isLoading} />
+      <main className='booking'>
+        <img src={image6} alt='Restaurant table image' />
+        <Booking className='booking_card' tittle='Make a reservation' times={times} dispatch={dispatch} successfulSubmit={successfulSubmit} submitDispatch={submitDispatch} />
+      </main>
+
+    </>
+
   )
 }
 

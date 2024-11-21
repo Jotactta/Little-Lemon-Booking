@@ -5,7 +5,7 @@ import LinkButton from './LinkButton/LinkButton.jsx'
 import ActionButton from './ActionButton/ActionButton.jsx'
 
 import image6 from '../../../../assets/images/image6.png'
-import checkIcon from '../../../../assets/images/icons/check_icon2.png'
+import checkIcon from '../../../../assets/images/icons/check_icon2.svg'
 import calendarIcon from '../../../../assets/images/icons/calendar_icon.png'
 import timeIcon from '../../../../assets/images/icons/time_icon.png'
 import peopleIcon from '../../../../assets/images/icons/people_icon.png'
@@ -54,7 +54,7 @@ function ConfirmedBooking ({ submitDispatch }) {
           : infoChanger === true
             ? <article className='cb_message'>
               <div className='confirmMessage'>
-                <img src={checkIcon} alt='check icon' />
+                <img src={checkIcon} className='confirmMessageIcon' alt='check icon' />
                 <h1>Booking Confirmed!</h1>
               </div>
 

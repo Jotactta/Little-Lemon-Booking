@@ -83,8 +83,20 @@
     align-items: center;
 }
 
-.cb_message img {
-    height: 60px;
+.confirmMessageIcon {
+    height: 50px;
+    transition: all 0.3s linear 0.1s;
+
+}
+
+@starting-style {
+
+    .confirmMessageIcon {
+        height: 0px;
+    }
+
+
+
 }
 
 .cb_message h1 {
@@ -93,7 +105,10 @@
     text-align: center;
     line-height: 40px;
     color: #495E57;
+
 }
+
+
 
 .cb_button {
     position: absolute;
@@ -167,7 +182,7 @@
     gap: 5px;
     align-items: center;
 
-    width: 100%%;
+    width: 100%;
 }
 
 .reserve_info img {
@@ -216,12 +231,15 @@
 
     .cb_button,
     .back_button {
-        bottom: 90px;
+        bottom: 20%;
     }
 
     .dinner_details h1 {
-        top: 130px;
+        top: 25%;
     }
+
+
+
 
     .reserve_info {
         width: 70%;

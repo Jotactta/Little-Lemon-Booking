@@ -23,18 +23,23 @@
     flex-direction: column;
     justify-content: center;
 
-    transition: all 1.5s linear 0.5s;
+    opacity: 1;
+    will-change: opacity;
+
+    transition: all 1.5s linear 1s;
 
     z-index: 3;
 }
 
-.gradient.notLoad {
-    opacity: 0;
+@starting-style {
+
+    .gradient {
+        opacity: 0;
+    }
+
 }
 
-.gradient.load {
-    opacity: 1;
-}
+
 
 .gradient h1 {
     color: #F4CE14;
