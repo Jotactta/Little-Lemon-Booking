@@ -2,30 +2,62 @@ import { useState, useEffect } from 'react'
 
 import './CarouselAuto2.css'
 
-function CarouselAuto2 ({ images, intervalTime, className }) {
+function CarouselAuto2 ({ images, setIsLoading, intervalTime, className }) {
   const [slideIndex, setSlideIndex] = useState(0)
-  let nextSlide = slideIndex + 1
-  if (slideIndex === images.length - 1) { nextSlide = 0 }
+  const [startInterval, setStartItervval] = useState(false)
+  if (slideIndex > images.length - 1) { setSlideIndex(0) }
+  if (slideIndex < 0) { setSlideIndex(images.length - 1) }
+
+  // useEffect to load images before loading screen dissapear
+  useEffect(() => {
+    const loadImage = image => {
+      return new Promise((resolve) => {
+        const loadImg = new Image()
+        loadImg.src = image
+        loadImg.onload = () => {
+          resolve(image)
+        }
+      })
+    }
+
+    Promise.all(images.map(image => loadImage(image)))
+      .then(() => {
+        setTimeout(() => {
+          setStartItervval(true)
+          setIsLoading('load')
+        }, 800)
+      })
+  }, [])
 
   useEffect(() => {
+    let intervalRestart = true
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) {
+        intervalRestart = false
+      } else { intervalRestart = true }
+    })
+
     const timer = setInterval(() => {
-      setSlideIndex(slideIndex + 1)
+      if (intervalRestart === true && startInterval === true) { setSlideIndex(slideIndex + 1) }
     }, intervalTime)
 
     return () => clearInterval(timer)
-  }, [slideIndex])
-
-  useEffect(() => {
-    if (slideIndex > images.length - 1) { setSlideIndex(0) }
-  }, [slideIndex])
+  }, [slideIndex, startInterval])
 
   return (
     <div className={className}>
       <div className='homeCarouselContainer'>
 
-        <img src={images[slideIndex]} key={slideIndex} className='slide2' style={{ animationDuration: `${intervalTime / 1000}s` }} />
+        {images.map((image, index) => {
+          let position = 'none'
+          if (index === slideIndex) { position = 'active' }
 
-        <img src={images[nextSlide]} key={nextSlide} className='nextSlide2' />
+          if (index === slideIndex + 1 ||
+             (index === 0 && slideIndex === images.length - 1)) { position = 'next' }
+          return (
+            <img src={image} key={index} className={`slide ${position}`} />
+          )
+        })}
 
       </div>
     </div>

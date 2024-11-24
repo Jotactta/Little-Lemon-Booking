@@ -28,15 +28,15 @@ function MenuNav ({ className, times, dispatch, successfulSubmit, submitDispatch
 
   const [SCMenuStatus, setSCMenuStatus] = useState('hide')
   const SCMenu = useRef(null)
-  const SCMenuIcon = useRef(null)
+  const SmallScreenMenuIcon = useRef(null)
 
   function handleClick () {
     if (SCMenuStatus === 'hide') { setSCMenuStatus('show') } else { setSCMenuStatus('hide') }
   }
 
-  document.addEventListener('mousedown', (e) => {
+  document.addEventListener('click', (e) => {
     if (SCMenuStatus === 'show' && !SCMenu.current.contains(e.target)) {
-      if (!SCMenuIcon.current.contains(e.target)) {
+      if (!SmallScreenMenuIcon.current.contains(e.target)) {
         setSCMenuStatus('hide')
       }
     }
@@ -59,7 +59,7 @@ function MenuNav ({ className, times, dispatch, successfulSubmit, submitDispatch
 
       <nav className={`navContainer ${scrollClass}`}>
         <Link to='/' className={`logoContainer ${scrollClass}`}>
-          <img className='navLogo' alt='little lemon logo' src={navLogo} />
+          <img className={`navLogo ${scrollClass}`} alt='little lemon logo' src={navLogo} />
         </Link>
         <ul className='navMenu'>
           {links.map((link, index) => {
@@ -72,7 +72,7 @@ function MenuNav ({ className, times, dispatch, successfulSubmit, submitDispatch
           })}
         </ul>
 
-        <div className='SCMenuIcon' onClick={handleClick} ref={SCMenuIcon}>
+        <div className={`SCMenuIcon ${scrollClass}`} onClick={handleClick} ref={SmallScreenMenuIcon}>
           <img src={burgerIcon} />
         </div>
       </nav>

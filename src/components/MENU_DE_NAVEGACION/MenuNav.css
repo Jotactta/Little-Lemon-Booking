@@ -6,7 +6,7 @@
     align-items: center;
     position: fixed;
     top: 0;
-    z-index: 5;
+    z-index: 50;
 
     background-color: rgba(237, 239, 238, 0.85);
     backdrop-filter: blur(3px);
@@ -20,6 +20,8 @@
 
 .navContainer.hide {
     opacity: 0;
+    pointer-events: none;
+
 }
 
 .navMenu {
@@ -35,11 +37,17 @@
 
 .logoContainer.hide {
     z-index: -10;
+    pointer-events: none;
 }
 
 .navLogo {
     height: 70%;
     margin: 0 20px 0 50px;
+}
+
+.navLogo.hide {
+    z-index: -10;
+    pointer-events: none;
 }
 
 .linkContainer {
@@ -49,29 +57,19 @@
 
 .linkContainer.hide {
     z-index: -10;
+    pointer-events: none;
 }
 
 .SCMenuIcon {
-    height: 30px;
-    width: 30px;
-    overflow: hidden;
-
     display: none;
-    position: absolute;
-    right: 15px;
-    top: 50%;
-    transform: translateY(-50%);
 
-    border-color: black;
-    border-radius: 5px;
-
-    cursor: pointer;
 }
 
 .SCMenuIcon img {
     object-fit: cover;
     height: 100%;
     width: 100%;
+    z-index: 50;
 }
 
 .SCMenu,
@@ -97,6 +95,10 @@
         display: none;
     }
 
+    .navMenu {
+        display: none;
+    }
+
     .navLogo {
         margin-left: 20px;
         height: 80%;
@@ -104,6 +106,29 @@
 
     .SCMenuIcon {
         display: block;
+
+        height: 30px;
+        width: 30px;
+        overflow: hidden;
+
+        margin-right: 15px;
+
+        border-color: black;
+        border-radius: 5px;
+
+        cursor: pointer;
+        z-index: 50;
+
+        transition: all 0.3s linear;
+
+    }
+
+    .SCMenuIcon.show {
+        opacity: 1;
+    }
+
+    .SCMenuIcon.hide {
+        opacity: 0;
     }
 
     .SCMenu {
@@ -115,13 +140,16 @@
 
         position: fixed;
         top: 60px;
+        right: -250px;
 
-        z-index: 5;
+        z-index: 50;
 
         border-top-left-radius: 10px;
 
         border-bottom-left-radius: 10px;
         overflow: hidden;
+
+        will-change: transform, opacity;
 
         background-color: rgba(237, 239, 238, 0.85);
         backdrop-filter: blur(3px);
@@ -132,13 +160,12 @@
 
     .SCMenu.hide {
         opacity: 0;
-        right: -250px;
+        transform: translateX(0);
     }
 
     .SCMenu.show {
         opacity: 1;
-        right: 0px;
-
+        transform: translateX(-250px);
     }
 
     .SClinkContainer {

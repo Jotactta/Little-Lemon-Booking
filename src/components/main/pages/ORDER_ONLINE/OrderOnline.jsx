@@ -1,17 +1,6 @@
-import { useState, useEffect } from 'react'
-import LoadingScreen from '../HOME/LoadingScreen/LoadingScreen'
-
 function OrderOnline () {
-  const [isLoading, setIsLoading] = useState('notLoad')
-
-  useEffect(() => {
-    setTimeout(() => {
-      setIsLoading('load')
-    }, '1000')
-  }, [])
   return (
     <>
-      <LoadingScreen isLoading={isLoading} />
       <main>
         <h1>ORDER ONLINE</h1>
       </main>

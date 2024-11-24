@@ -1,4 +1,4 @@
-.loadingPage {
+.reserveLoadingPage {
     width: 100vw;
     height: 100vh;
     box-sizing: border-box;
@@ -12,10 +12,10 @@
     justify-content: center;
 
     background-color: #495E57;
-    z-index: 30;
+    z-index: 10;
 }
 
 
-.loadingPage img {
+.reserveLoadingPage img {
     width: 100px;
 }

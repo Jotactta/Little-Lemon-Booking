@@ -16,10 +16,19 @@ function HomeSpecials ({ cards, intervalTime, className }) {
   if (slideIndex < 0) { setSlideIndex(cards.length - 1) }
 
   useEffect(() => {
+    let intervalRestart = true
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) {
+        intervalRestart = false
+      } else { intervalRestart = true }
+    })
+
     const timer = setInterval(() => {
-      setSlideTime(intervalTime)
-      setSlideIndex(slideIndex + 1)
-      availableClick.current = 'false'
+      if (intervalRestart === true) {
+        setSlideTime(intervalTime)
+        setSlideIndex(slideIndex + 1)
+        availableClick.current = 'false'
+      }
     }, slideTime)
 
     return () => clearInterval(timer)

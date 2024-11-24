@@ -8,7 +8,7 @@ import image4 from './home_img4.jpg'
 
 import './HomeSection1.css'
 
-function HomeSection1 ({ isLoading }) {
+function HomeSection1 ({ isLoading, setIsLoading }) {
   const images = [image1, image2, image3, image4]
 
   return (
@@ -20,7 +20,7 @@ function HomeSection1 ({ isLoading }) {
           <h3 className={`${isLoading}`}>We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.</h3>
           <Button className='button1' isLoaded={isLoading} link='/reservations'>Reserve a Table</Button>
         </div>
-        <CarouselAuto2 images={images} intervalTime={10000} className='homeSlider' />
+        <CarouselAuto2 images={images} setIsLoading={setIsLoading} intervalTime={10000} className='homeSlider' />
       </div>
     </section>
   )

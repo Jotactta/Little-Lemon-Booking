@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 
 import LoadingScreen from './LoadingScreen/LoadingScreen.jsx'
 import HomeSection1 from './HOME-SECTION1/HomeSection1.jsx'
@@ -75,40 +75,38 @@ function Home () {
 
   const [isLoading, setIsLoading] = useState('notLoad')
 
-  useEffect(() => {
-    setTimeout(() => {
-      setIsLoading('load')
-    }, '2500')
-  }, [])
-
   return (
-    <main className='home'>
+    <>
+
+      <main className='home'>
+
+        <HomeSection1 isLoading={isLoading} setIsLoading={setIsLoading} />
+        <HomeSpecials cards={cards} intervalTime={5000} className='homeSpecials' />
+        <HomeTestimonials testimonials={testimonials} />
+        <section className='section4'>
+          <article className='sec4_text'>
+            <h1>Little Lemon</h1>
+            <h3>Chicago</h3>
+            <p>{TEXT2}</p>
+          </article>
+
+          <div className='sec4_images'>
+            <div>
+              <div className='sec4_img1'><img src={image2} loading='lazy' alt='Little Lemon Restaurant pic' /></div>
+              <div className='sec4_img2'><img src={image3} loading='lazy' alt='Mario and Adrian pic' /></div>
+            </div>
+
+            <div>
+              <div className='sec4_img3'><img src={image4} loading='lazy' alt='Adrian pic' /></div>
+              <div className='sec4_img4'><img src={image5} loading='lazy' alt='Mario and Adrian pic' /></div>
+            </div>
+          </div>
+        </section>
+
+      </main>
       <LoadingScreen isLoading={isLoading} />
 
-      <HomeSection1 isLoading={isLoading} />
-      <HomeSpecials cards={cards} intervalTime={5000} className='homeSpecials' />
-      <HomeTestimonials testimonials={testimonials} />
-
-      <section className='section4'>
-        <article className='sec4_text'>
-          <h1>Little Lemon</h1>
-          <h3>Chicago</h3>
-          <p>{TEXT2}</p>
-        </article>
-
-        <div className='sec4_images'>
-          <div>
-            <div className='sec4_img1'><img src={image2} alt='Little Lemon Restaurant pic' /></div>
-            <div className='sec4_img2'><img src={image3} alt='Mario and Adrian pic' /></div>
-          </div>
-
-          <div>
-            <div className='sec4_img3'><img src={image4} alt='Adrian pic' /></div>
-            <div className='sec4_img4'><img src={image5} alt='Mario and Adrian pic' /></div>
-          </div>
-        </div>
-      </section>
-    </main>
+    </>
   )
 }
 

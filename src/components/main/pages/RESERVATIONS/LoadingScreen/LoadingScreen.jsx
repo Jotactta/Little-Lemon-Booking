@@ -8,7 +8,7 @@ function LoadingScreen ({ isLoading }) {
     return (<></>)
   } else {
     return (
-      <div className='loadingPage'>
+      <div className='reserveLoadingPage'>
         <img src={loadingGif} alt='Loading gif' />
       </div>
     )

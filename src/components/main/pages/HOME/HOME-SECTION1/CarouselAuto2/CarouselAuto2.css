@@ -13,7 +13,7 @@
 }
 
 
-.slide2 {
+.slide {
     object-fit: cover;
     width: 100%;
     height: 100%;
@@ -22,39 +22,30 @@
     top: 0;
     left: 0;
 
+    opacity: 0;
+    z-index: 0;
+    will-change: opacity, z-index;
+
+    transition: opacity 1.5s linear, z-index 0.1s linear 1.5s;
+}
+
+.slide.active {
     opacity: 1;
     z-index: 2;
-
-    will-change: opacity;
-
-    animation-name: exitAnimation;
-    animation-fill-mode: forwards;
 }
 
-@keyframes exitAnimation {
-    0% {
-        opacity: 1;
-    }
-
-    70% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
-    }
-
+.slide.next {
+    opacity: 1;
+    z-index: 1;
 }
 
-.nextSlide2 {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-
-    position: absolute;
-    top: 0;
-    left: 0;
+.slide.none {
+    opacity: 0;
+    z-index: 0;
 }
+
+
+
 
 /* --------------------RESPONSIE DESIGN --------------------- */
 
