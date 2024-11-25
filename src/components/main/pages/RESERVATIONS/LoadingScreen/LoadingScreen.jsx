@@ -1,5 +1,5 @@
 import './LoadingScreen.css'
-import loadingGif from './loadingGif.svg'
+import loadingGif from './loadingLemon.svg'
 
 function LoadingScreen ({ isLoading }) {
   document.body.style.overflow = 'hidden'

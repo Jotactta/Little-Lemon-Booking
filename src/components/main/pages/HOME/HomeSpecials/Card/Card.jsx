@@ -9,7 +9,7 @@ function Card ({ image, title, price, text, className, availableClick }) {
     >
 
       <div className='card'>
-        <div className='card_image'><img src={image} alt={`${title} image`} /></div>
+        <div className='card_image'><img src={image} loading='lazy' alt={`${title} image`} /></div>
 
         <div className='card_tittle'>
           <h3>{title}</h3>

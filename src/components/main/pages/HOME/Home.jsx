@@ -77,6 +77,7 @@ function Home () {
 
   return (
     <>
+      <LoadingScreen isLoading={isLoading} />
 
       <main className='home'>
 
@@ -104,7 +105,6 @@ function Home () {
         </section>
 
       </main>
-      <LoadingScreen isLoading={isLoading} />
 
     </>
   )

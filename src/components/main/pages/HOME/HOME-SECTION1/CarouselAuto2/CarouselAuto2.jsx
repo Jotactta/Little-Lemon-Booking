@@ -10,17 +10,19 @@ function CarouselAuto2 ({ images, setIsLoading, intervalTime, className }) {
 
   // useEffect to load images before loading screen dissapear
   useEffect(() => {
-    const loadImage = image => {
-      return new Promise((resolve) => {
-        const loadImg = new Image()
-        loadImg.src = image
-        loadImg.onload = () => {
-          resolve(image)
-        }
-      })
+    const loadImage = (image, index) => {
+      if (index < 1) {
+        return new Promise((resolve) => {
+          const loadImg = new Image()
+          loadImg.src = image
+          loadImg.onload = () => {
+            resolve(image)
+          }
+        })
+      }
     }
 
-    Promise.all(images.map(image => loadImage(image)))
+    Promise.all(images.map((image, index) => loadImage(image, index)))
       .then(() => {
         setTimeout(() => {
           setStartItervval(true)

@@ -27,17 +27,17 @@ export function Footer () {
         <h3>Contact</h3>
         <div>
           <div className='contact_info'>
-            <img className='footer_icon' alt='location icon' src={locationIcon} />
+            <img className='footer_icon' alt='location icon' loading='lazy' src={locationIcon} />
             <p>{ADRESS}</p>
           </div>
 
           <div className='contact_info'>
-            <img className='footer_icon' alt='phone icon' src={phoneIcon} />
+            <img className='footer_icon' alt='phone icon' loading='lazy' src={phoneIcon} />
             <p>{PHONE_NUMBER}</p>
           </div>
 
           <div className='contact_info'>
-            <img className='footer_icon' alt='email icon' src={emailIcon} />
+            <img className='footer_icon' alt='email icon' loading='lazy' src={emailIcon} />
             <p>{EMAIL}</p>
           </div>
         </div>
@@ -49,15 +49,15 @@ export function Footer () {
 
         <div className='social_media_links'>
           <div>
-            <a href={FB_LINK} target='_blank' aria-label='On Click' rel='noreferrer'><img className='footer_icon' alt='facebook icon' src={fbIcon} /></a>
+            <a href={FB_LINK} target='_blank' aria-label='On Click' rel='noreferrer'><img className='footer_icon' alt='facebook icon' loading='lazy' src={fbIcon} /></a>
           </div>
 
           <div>
-            <a href={IG_LINK} target='_blank' aria-label='On Click' rel='noreferrer'><img className='footer_icon' alt='instagram icon' src={igIcon} /></a>
+            <a href={IG_LINK} target='_blank' aria-label='On Click' rel='noreferrer'><img className='footer_icon' alt='instagram icon' loading='lazy' src={igIcon} /></a>
           </div>
 
           <div>
-            <a href={X_LINK} target='_blank' aria-label='On Click' rel='noreferrer'><img className='footer_icon' alt='twitter icon' src={xIcon} /></a>
+            <a href={X_LINK} target='_blank' aria-label='On Click' rel='noreferrer'><img className='footer_icon' alt='twitter icon' loading='lazy' src={xIcon} /></a>
           </div>
         </div>
       </section>
